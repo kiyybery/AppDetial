@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:columnCount="3"
+    android:descendantFocusability="beforeDescendants"
+    android:orientation="horizontal">
+    <!--头像-->
+    <com.xyn.appdetial.widget.CircleImageView
+        android:id="@+id/iv_works_avatar"
+        style="@style/commonAvatar"
+        android:layout_column="0"
+        android:layout_row="0"
+        android:layout_rowSpan="2" />
+    <!--描述性的是1-->
+    <LinearLayout
+        android:layout_column="1"
+        android:layout_gravity="fill|center_vertical"
+        android:layout_row="0"
+        android:layout_rowSpan="2"
+        android:orientation="vertical">
+        <!--昵称-->
+        <TextView
+            android:id="@+id/tv_works_author_name"
+            style="@style/commonNickname"
+            android:layout_weight="1" />
+        <!--优先级：1.职业，2签名，3地理位置-->
+        <TextView
+            android:id="@+id/tv_author_detail"
+            style="@style/commonIntroduce"
+            android:layout_weight="1"
+            android:text="1.职业，2签名，3地理位置"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!--添加关注-->
+    <ImageButton
+        android:id="@+id/ib_concern_from_workslist"
+        style="?android:imageButtonStyle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_column="2"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:layout_row="0"
+        android:layout_rowSpan="2"
+        android:background="@color/transparent"
+        android:src="@drawable/add_focus_drawable" />
+
+
+    <ImageButton
+        android:id="@+id/ib_add_collections"
+        style="?android:imageButtonStyle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_column="2"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="12dp"
+        android:layout_row="5"
+        android:background="@color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/collect_drawable" />
+
+    <FrameLayout
+        android:id="@+id/LikeAnimatorContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:layout_row="2">
+        <!--封面图片-->
+        <com.xyn.appdetial.widget.ImageViewWithGesture
+            android:id="@+id/iv_works_cover"
+            style="?android:imageButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="@null"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_have_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/icon_play_circle"
+            android:visibility="invisible" />
+    </FrameLayout>
+    <!--标题，-->
+
+    <TextView
+        android:id="@+id/tv_works_title"
+        style="@style/Works.List"
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:layout_row="3"
+        android:paddingLeft="@dimen/worklistAvatarMarginLeft"
+        android:paddingTop="15dp"
+        android:singleLine="true"
+        android:textColor="@color/yr_text_dark"
+        android:textSize="15sp" />
+    <!--标签-->
+    <TextView
+        android:id="@+id/tv_works_works_tag"
+        style="@style/Works.List"
+        android:layout_column="0"
+        android:layout_columnSpan="3"
+        android:layout_row="4"
+        android:paddingLeft="@dimen/worklistAvatarMarginLeft"
+        android:paddingTop="8dp"
+        android:singleLine="true"
+        android:textColor="@color/yr_text_light"
+        android:textSize="12sp" />
+
+
+    <!--点赞，评论，观看数量，最右button -->
+    <LinearLayout
+        android:layout_height="48dp"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill_horizontal"
+        android:layout_row="5"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_works_view_count"
+            style="@style/Works.List.tv1"
+            android:drawableLeft="@drawable/icon_views" />
+
+        <TextView
+            android:id="@+id/tv_works_comment"
+            style="@style/Works.List.tv1"
+            android:drawableLeft="@drawable/comment_icon" />
+
+        <TextView
+            android:id="@+id/tv_works_like_count"
+            style="@style/Works.List.tv1"
+            android:drawableLeft="@drawable/like_drawable" />
+
+        <!--竟然能影响外界的layout-->
+        <!-- <View
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1" />-->
+        <!--收藏按钮-->
+
+    </LinearLayout>
+
+</GridLayout>

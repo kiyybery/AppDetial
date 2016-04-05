@@ -32,6 +32,13 @@ import com.lidroid.xutils.http.client.entity.GZipDecompressingEntity;
 import com.lidroid.xutils.task.PriorityExecutor;
 import com.lidroid.xutils.util.OtherUtils;
 
+import org.apache.http.Header;
+import org.apache.http.HeaderElement;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpRequestInterceptor;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpResponseInterceptor;
+import org.apache.http.HttpVersion;
 import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.protocol.ClientContext;

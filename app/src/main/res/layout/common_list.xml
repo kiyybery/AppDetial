@@ -6,7 +6,7 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
-    <com.zihua.youren.widget.PushListView
+    <com.xyn.appdetial.widget.PushListView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

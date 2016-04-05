@@ -83,8 +83,10 @@ public class Config {
         //正式环境为zihua.com.cn
         String host = "http://zihua.com.cn";
         //String host = "http://dev.zihua.com.cn";
+        String test_host = "http://7xop51.com1.z0.glb.clouddn.com";
 
         String api_base = host + File.separator + "rest" + File.separator;
+        String api_base_test = test_host + File.separator;
         String polyvOfGetThumbnail = "http://v.polyv.net/uc/video/getImage?vid=";
         boolean debug = true;
         //  1是最热， 2是最新，3是推荐

@@ -15,7 +15,8 @@
 
 package com.lidroid.xutils.http.callback;
 
-import com.zihua.youren.Config;
+
+import com.xyn.appdetial.Config;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;

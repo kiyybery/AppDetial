@@ -5,6 +5,50 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="FrameworkRoot.Theme" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Theme" parent="FrameworkRoot.Theme">
+        <!-- Only needed for pre-L -->
+        <item name="android:editTextBackground">@color/white</item>
+        <item name="android:editTextStyle">@style/Widget.IOSched.EditText</item>
+        <item name="android:textCursorDrawable">@drawable/edittext_cursor_color</item>
+    </style>
+
+    <style name="Widget.IOSched.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@color/white</item>
+        <item name="android:textCursorDrawable">@drawable/edittext_cursor_color</item>
+    </style>
+
+    <style name="Theme.IOSched.Base" parent="Theme">
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_light</item>
+        <!--0615 影响了radio button ,edit text 高亮-->
+        <item name="colorControlActivated">@color/yr_icon_blending</item>
+        <!--0615 影响了点击某些button 按下时的状态-->
+        <item name="colorControlHighlight">@color/yr_pressed</item>
+
+        <item name="android:textColorLink">@color/yr_pressed</item>
+
+
+        <!--   <item name="android:windowContentOverlay">@null</item>-->
+        <item name="android:windowBackground">@android:color/white</item>
+        <!--  <item name="android:fastScrollThumbDrawable">@drawable/scrollbar_thumb</item>
+          <item name="android:fastScrollTrackDrawable">@drawable/scrollbar_track</item>
+          <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb</item>
+          <item name="android:scrollbarTrackVertical">@drawable/scrollbar_track</item>-->
+    </style>
+
+    <style name="Theme.IOSched" parent="Theme.IOSched.Base">
+        <item name="actionMenuTextColor">@color/yr_text_dark</item>
+        <item name="android:actionMenuTextColor">@color/red</item>
+
+    </style>
+
+    <style name="Theme.IOSched.NoActionbar" parent="@style/Theme.IOSched">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <!--自定义的actionBar-->
     <style name="ToolBarStyle.Base" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
@@ -15,5 +59,80 @@
 
     <style name="ToolBarDarkMenuStyle" parent="ToolBarStyle.Base">
         <item name="android:actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="commonAvatar">
+        <item name="android:layout_width">@dimen/avatar_worksList</item>
+        <item name="android:layout_height">@dimen/avatar_worksList</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">@dimen/worklistAvatarMarginLeft</item>
+        <item name="android:clickable">true</item>
+        <item name="android:src">@drawable/avatar_default</item>
+    </style>
+
+    <style name="commonNickname">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/yr_text_dark</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="commonIntroduce">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/yr_text_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="noticeAvatar">
+        <item name="android:layout_width">@dimen/avatar_worksList</item>
+        <item name="android:layout_height">@dimen/avatar_worksList</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/worklistAvatarMarginLeft</item>
+        <item name="android:clickable">true</item>
+        <item name="android:src">@drawable/avatar_default</item>
+    </style>
+
+    <style name="chatAvatarSend" parent="commonAvatar">
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+    </style>
+
+    <style name="chatAvatarReceive" parent="commonAvatar">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+    </style>
+
+    <style name="Works">
+
+    </style>
+
+    <style name="Works.List" parent="Works">
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <!-- for adapter-->
+    <style name="Works.List.tv1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/yr_text_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:paddingLeft">@dimen/worklistAvatarMarginLeft</item>
     </style>
 </resources>

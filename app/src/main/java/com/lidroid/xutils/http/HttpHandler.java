@@ -28,8 +28,9 @@ import com.lidroid.xutils.http.callback.RequestCallBackHandler;
 import com.lidroid.xutils.http.callback.StringDownloadHandler;
 import com.lidroid.xutils.task.PriorityAsyncTask;
 import com.lidroid.xutils.util.OtherUtils;
-import com.zihua.youren.App;
-import com.zihua.youren.netapi.PersistentCookieStore;
+import com.xyn.appdetial.App;
+import com.xyn.appdetial.netapi.PersistentCookieStore;
+
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;

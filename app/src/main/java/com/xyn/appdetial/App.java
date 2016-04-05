@@ -12,4 +12,10 @@ public class App extends Application{
     public static App get() {
         return APP;
     }
+
+    @Override
+    public void onCreate() {
+        APP = this;
+        super.onCreate();
+    }
 }

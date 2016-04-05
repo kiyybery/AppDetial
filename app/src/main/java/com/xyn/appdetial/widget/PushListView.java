@@ -29,7 +29,7 @@ import java.util.Locale;
 /**
  * Created by Administrator on 2016/3/29 0029.
  */
-public class PushListView extends ListView implements AbsListView.OnScrollListener{
+public class PushListView extends ListView implements AbsListView.OnScrollListener {
 
     /**
      * 显示格式化日期模板
@@ -145,6 +145,11 @@ public class PushListView extends ListView implements AbsListView.OnScrollListen
 
     public PushListView(Context pContext) {
         super(pContext);
+        init(pContext);
+    }
+
+    public PushListView(Context pContext, AttributeSet pAttrs) {
+        super(pContext, pAttrs);
         init(pContext);
     }
 
@@ -678,7 +683,7 @@ public class PushListView extends ListView implements AbsListView.OnScrollListen
         }
     }
 
-    private long lastRefreshTime=System.currentTimeMillis();
+    private long lastRefreshTime = System.currentTimeMillis();
 
     /**
      * 下拉刷新完成
