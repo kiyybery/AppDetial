@@ -42,6 +42,4 @@ public class HomeApi extends BaseApi {
         }*/
         return send(HttpRequest.HttpMethod.GET, mBase_Url, params, apiListener);
     }
-
-
 }

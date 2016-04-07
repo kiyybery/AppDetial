@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.reflect.TypeToken;
+import com.lidroid.xutils.http.HttpHandler;
 import com.xyn.appdetial.BaseListFragment;
 import com.xyn.appdetial.R;
 import com.xyn.appdetial.model.WorksItem;
@@ -36,6 +37,15 @@ public class HomeFragment extends BaseListFragment {
     private LayoutInflater mInflater;
     private int clickedPosition = -1;
 
+    public static HomeFragment newInstance() {
+
+        HomeFragment hf = new HomeFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("title", "首页");
+        hf.setArguments(bundle);
+        return hf;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +55,11 @@ public class HomeFragment extends BaseListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
     }
 
     @Override

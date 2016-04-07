@@ -2,17 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:clickable="true"
     android:orientation="vertical">
 
     <include
-        layout="@layout/toobar_without_navi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    layout="@layout/toobar_without_navi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_height="match_parent">
 
         <com.xyn.appdetial.widget.PushListView
             android:id="@+id/list"
@@ -45,5 +46,6 @@
                 android:layout_margin="40dip" />
         </FrameLayout>
     </FrameLayout>
+
 
 </LinearLayout>

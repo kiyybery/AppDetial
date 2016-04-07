@@ -1,11 +1,61 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/main_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
 
-</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom"
+        android:background="#f4262626"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/maintab1"
+            layout="@layout/tab_home" />
+
+        <include
+            android:id="@+id/maintab2"
+            layout="@layout/tab_class" />
+
+        <ImageButton
+            android:id="@+id/ib_generate_works"
+            style="?android:imageButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:onClick="onClickTab"
+            android:src="@drawable/camera_drawable" />
+
+        <include
+            android:id="@+id/maintab3"
+            layout="@layout/tab_me" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f4262626"
+        android:weightSum="4">
+
+        <FrameLayout
+            android:id="@+id/mainTabIndicator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView style="@style/TabIndicator" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

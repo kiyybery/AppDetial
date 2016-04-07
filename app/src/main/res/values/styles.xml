@@ -135,4 +135,37 @@
         <item name="android:drawablePadding">4dp</item>
         <item name="android:paddingLeft">@dimen/worklistAvatarMarginLeft</item>
     </style>
+
+    <!--底部tab 选项卡-->
+
+    <style name="TabLayout">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TabItemLayout">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:enabled">true</item>
+        <item name="android:checkable">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:onClick">"onClickTab</item>
+    </style>
+
+    <style name="TabItemButton">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:clickable">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="TabIndicator">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
 </resources>
